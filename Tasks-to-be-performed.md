@@ -57,42 +57,42 @@ If you would rather use something other than Visual Studio
 
 __Note:__ This isn't the only way to accomplish implementation, however; this is what the project's tests are expecting. Implementing the features in a different way will likely result in being marked as incomplete / incorrect.
 
-- [DONE] Add support for Ranked Grading
-	- [DONE] Creating The `GradeBookType` Enum.
-		- [DONE] Create a new Enum `GradeBookType`.
+- [x] Add support for Ranked Grading
+	- [x] Creating The `GradeBookType` Enum.
+		- [x] Create a new Enum `GradeBookType`.
 			- This should be located in the `Enums` directory.
 			- This should use the `GradeBooks.Enums` namespace.
 			- This should use the `public` access modifier.
 			- This should contain the values `Standard`, `Ranked`, `ESNU`, `OneToFour`, and `SixPoint`.
 
-	- [DONE] Add `Type` property
-		- [DONE] Add a new property `Type` to `BaseGradeBook`
+	- [x] Add `Type` property
+		- [x] Add a new property `Type` to `BaseGradeBook`
 			- This should use the name `Type`.
 			- This should be of type `GradeBookType`.
 			- This should use the `public` access modifier.
 
-	- [ DONE] Creating the `StandardGradeBook` class
-		- [DONE ] Create a class `StandardGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
+	- [x] Creating the `StandardGradeBook` class
+		- [x] Create a class `StandardGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
 			- This should be located in the `GradeBooks` directory.
 			- This should use the `GradeBook.GradeBooks` namespace.
 			- This should inherit the `BaseGradeBook` class.
-		- [DONE ] Create a constructor for `StandardGradeBook`
+		- [x] Create a constructor for `StandardGradeBook`
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Standard`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
 
-	- [DONE ] Creating the `RankedGradeBook` class
-		-  [DONE ] Create a class `RankedGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
+	- [x] Creating the `RankedGradeBook` class
+		-  [x] Create a class `RankedGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
 			- This should be located in the `GradeBooks` directory.
 			- This should use the `GradeBook.GradeBooks` namespace.
 			- This should inherit the `BaseGradeBook` class.
-		-  [DONE ] Create a constructor for `RankedGradeBook`
+		-  [x] Create a constructor for `RankedGradeBook`
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Ranked`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
 
-	- [ ] Override `RankedGradeBook`'s `GetLetterGrade` method
-		- [ ] Provide the appropriate grades based on how the input grade compares to other students.
+	- [x] Override `RankedGradeBook`'s `GetLetterGrade` method
+		- [x] Provide the appropriate grades based on how the input grade compares to other students.
 			_(One way to solve this is to figure out how many students make up 20%, then loop through all the grades and check how many scored higher than the input average, every N students where N is that 20% value drop a letter grade.)_
 			- If there are less than 5 students throw an `InvalidOperationException`.
 			- Return A if the input grade is in the top 20% of the class.
@@ -101,8 +101,8 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- Return D if the input grade is between the top 60 and 80% of the class.
 			- Return F if the grade is below the top 80% of the class.
 
-	- [ ] Override `RankedGradeBook`'s `CalculateStatistics` method
-		- [ ] Short circuit the method if there are less than 5 students.
+	- [x] Override `RankedGradeBook`'s `CalculateStatistics` method
+		- [x] Short circuit the method if there are less than 5 students.
 			- If there are less than 5 students write "Ranked grading requires at least 5 students." to the Console.
 			- If there are 5 or more students call the base class's `CalculateStatistics` method using `base.CalculateStatistics`.
 
