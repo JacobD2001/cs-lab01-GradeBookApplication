@@ -31,7 +31,7 @@ namespace GradeBook.UserInterfaces
                 Console.WriteLine("{0} was not recognized, please try again.", command);
         }
 
-        public static void CreateCommand(string command)
+        public static  void CreateCommand(string command)
         {
            
             var parts = command.Split(' ');
@@ -42,17 +42,19 @@ namespace GradeBook.UserInterfaces
             }
 
             var name = parts[1]; //name 
-            BaseGradeBook gradeBook = new BaseGradeBook(name);
+            BaseGradeBook gradeBook; //= new BaseGradeBook(name);
             //var type = parts[2]; //type
             
             if (parts[2] == "standard") 
             {
+                //StandardGradeBook gradeBook1 = new StandardGradeBook(name);
                 gradeBook = new StandardGradeBook(name); 
               
             }
             else if(parts[2] == "ranked")
             {
-                gradeBook = new RankedGradeBook(name);
+                //RankedGradeBook gradeBook2 = new RankedGradeBook(name);
+               gradeBook = new RankedGradeBook(name);
                 
             }
             else

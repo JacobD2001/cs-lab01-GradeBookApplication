@@ -123,8 +123,8 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 	- [x] Update `StartingUserInterfaces`'s `HelpCommand` method
 		- [x] Change where `HelpCommand` outlines the "create" command to write "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use." to the console.
 
-	- [ ] Make the `BaseGradeBook` class abstract
-		- [ ] Add the `abstract` keyword to the `BaseGradeBook` declaration.
+	- [x] Make the `BaseGradeBook` class abstract
+		- [x] Add the `abstract` keyword to the `BaseGradeBook` declaration.
 
 - [ ] Add support for weighted GPAs
 	- [ ] Add `IsWeighted` property to `BaseGradeBook`
